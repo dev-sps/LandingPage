@@ -30,7 +30,6 @@ let sectionsList = nav_list.childNodes;
 */
 function createNavBarItem(s){
     let node = document.createElement('LI');
-    //let anchor = document.createElement('A');
     let name = s.getAttribute('data-nav');
     node.innerText = name;
     return node;
@@ -39,7 +38,6 @@ function createNavBarItem(s){
 
 // build the nav
 for (let section of sections){
-    console.log(typeof(section.getAttribute('data-nav')));
     nav_list.appendChild(createNavBarItem(section));
 }
 
